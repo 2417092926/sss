@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>你好 世界</h1>
+<span th:if="${a}=='赵威'">
+女
+</span>
+<table>
+<tr>
+<th>名字</th>
+<th>年龄</th>
+<th>下标</th>
+<th>是否为最后一个</th>
+<th>是否为第一个</th>
+<th>是否为单数</th>
+<th>是否为双数</th>
+<th>长度</th>
+<th>总数</th>
+</tr>
+<tr th:each="i,k : ${data}">
+<td th:text="${i.name}"></td>
+<td th:text="${i.age}"></td>
+<td th:text="${k.index}"></td>
+<td th:text="${k.last}"></td>
+<td th:text="${k.first}"></td>
+<td th:text="${k.odd}"></td>
+<td th:text="${k.even}"></td>
+<td th:text="${k.size}"></td>
+<td th:text="${k.count}"></td>
+</tr>
+</table>
+</body>
+</html>
